@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ----- COMMON STYLE ----- */
+body{
+	color: #404040;
+	background-color: #f5f5f5;
+	font: 400 14px/1.5 'Open Sans', Arial, Helvetica, sans-serif;
+	letter-spacing: .05rem;
+	position: relative;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: inherit;
+	color: #000;
+	font-weight: 700;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+	margin: 0 0 15px 0;
+}
+
+a, a:visited{
+	color: #000;
+}
+
+a:hover{
+	color: #303f9f;
+	text-decoration: none;
+}
+
+p:last-child{
+	margin-bottom: 0;
+}
+
+button, input, .slick-slide, textarea{
+	outline: none;
+}
+
+textarea{
+	padding: 10px;
+	max-width: 100%;
+	width: 100%;
+	border: #dfdfdf solid 1px;
+	outline: none;
+}
+
+[type="text"],
+[type="search"],
+[type="email"]{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 10px;
+	border: #dfdfdf solid 1px;
+	outline: none;
+}
+
+img{
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+small{
+	letter-spacing: 0;
+}
+/* ----- COMMON STYLE END ----- */
+
+header{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 10px 0;
+	z-index: 1000;
+	color: #fff;
+}
+
+header a, header a:visited{
+	color: #fff;
+}
+
+header a:hover{
+	text-decoration: underline;
+	color: inherit;
+}
+
+header .material-icons{
+	line-height: 36px;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+header nav ul{
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.mobile-nav{
+	width: 300px;
+	position: fixed;
+	left: -300px;
+	top: 0;
+	bottom: 0;
+	background: #212121;
+	color: #fff;
+	z-index: 1001;
+	font-size: 200%;
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+}
+
+.mobile-nav ul{
+	display: block;
+}
+
+.mobile-nav a, .mobile-nav a:visited{
+	color: inherit;
+}
+
+.mobile-nav .nav-close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+.logo{
+	margin-bottom: 0;
+	font: 900 24px/36px 'Exo 2', sans-serif;
+	color: inherit;
+}
+
+.toggler{
+	cursor: pointer;
+}
+
+.slider, .post-header{
+	color: #fff;
+}
+
+.slide{
+	height: 100vh;
+	max-height: 700px;
+	padding: 5rem 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.slide .slide-background{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.slide .slide-background::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '';
+	background-color: #212121;
+	opacity: .77;
+}
+
+.slide .post-author{
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	bottom: 60px;
+}
+
+.slide .post-author img{
+	margin: 0 auto;
+}
+
+.slick-arrow{
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	cursor: pointer;
+	margin-top: -12px;
+}
+
+.slick-arrow.slick-prev{
+	left: 15px;
+}
+
+.slick-arrow.slick-next{
+	right: 15px;
+}
+
+.slide .post-entry{
+	margin-bottom: 90px
+}
+
+.title{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 900;
+}
+
+.slide .title{
+	color: #fff;
+}
+
+.slide .subtitle{
+	font-size: 20px;
+	line-height: 1;
+}
+
+.light-gray{
+	color: #cfcfcf;
+}
+
+.blue{
+	color: #303f9f;
+}
+
+.btn{
+	text-transform: uppercase;
+	background-color: #303f9f;
+	border-color: #303f9f;
+	color: #fff !important;
+}
+
+.btn-rounded{
+	height: 45px;
+	line-height: 45px;
+	padding: 0 30px;
+	border-radius: 20px;
+}
+
+.blog, .page{
+	padding: 30px 0;
+	position: relative;
+}
+
+.blog-item{
+	margin-bottom: 30px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .12);
+	overflow: hidden;
+}
+
+.blog-item--thumbnail{
+	position: relative;
+	padding-top: 56.25%;
+	color: #fff;
+}
+
+.blog-item--padding{
+	padding-top: 36.25%;
+}
+
+.blog-item--link{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.blog-item--thumbnail .blog-item--category{
+	position: absolute;
+	left: 10px;
+	bottom: 20px;
+	z-index: 2;
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.blog-item--thumbnail .icons{
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+	z-index: 3;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.icons .material-icons{
+	margin-right: 5px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.blog-item--preview{
+	padding: 20px;
+	border-bottom: #dfdfdf solid 1px;
+}
+
+.blog-item--author{
+	padding: 20px;
+}
+
+.date{
+	margin-right: 20px;
+}
+
+.author-preview{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.author-preview > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.avatar{
+	margin-right: 10px;
+	width: 50px;
+}
+
+/*
+.blog-item--horizontal{
+	position: relative;
+	padding-left: 262px;
+}
+*/
+
+.blog-item--horizontal .blog-item--thumbnail{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 262px;
+	padding: 0;
+}
+
+.btn-search{
+	height: 35px;
+	width: 35px;
+	background-color: #ff4081;
+	border-radius: 50%;
+	border: none;
+}
+
+.search form{
+	position: relative;
+}
+
+.search .btn-search{
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	margin-top: -18px;
+	color: #fff;
+}
+
+.btn-search .material-icons{
+	line-height: 35px;
+}
+
+.search input{
+	border-radius: 23px;
+	padding: 0 45px 0 15px;
+	background-color: #f5f5f5;
+	border-color: #f5f5f5;
+}
+
+aside{
+	border-radius: 5px 0 0;
+	padding: 10px;
+	background-color: #fff;
+}
+
+.aside-title{
+	margin: 40px 0 10px;
+	border-bottom: #aec3ff solid 1px;
+	padding-bottom: 10px;
+	color: #303f9f;
+}
+
+.categories ul{
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.categories ul li{
+	position: relative;
+	padding: 10px 30px 10px 0;
+	border-bottom: #cfcfcf solid 1px;
+}
+
+.categories ul li span{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	font-weight: bold;
+}
+
+.recents .row{
+	margin-bottom: 10px;
+}
+
+.tags a{
+	display: inline-block;
+	padding: 8px 10px;
+	background-color: #eee;
+	margin-bottom: 4px;
+	border-radius: 3px;
+}
+
+.carousel-item, .flickr-item{
+	padding-top: 100%;
+}
+
+.padding{
+	padding: 60px 0;
+}
+
+.subscribe{
+	position: relative;
+	background: url(../img/christmas-tree.jpg) 50% 50% no-repeat;
+}
+
+.subscribe::before{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '';
+	background-color: #212121;
+	opacity: .77;
+}
+
+.subscribe *{
+	color: #fff;
+}
+
+.subscribe-title{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 900;
+	margin-bottom: 0;
+	line-height: 45px;
+}
+
+.subscribe-email{
+	background: rgba(48, 48, 48, .38);
+	border-radius: 23px;
+	padding: 0 20px;
+	margin-right: 30px;
+}
+
+.subscribe form{
+	display: flex;
+	justify-content: space-between;
+}
+
+/*
+.accordeon, .accordeon ul{
+	display: block;
+}
+*/
+
+footer{
+	background: #212121;
+	color: #fff;
+}
+
+footer *{
+	color: inherit;
+}
+
+footer ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+footer ul ul{
+	display: none;
+}
+
+footer textarea, footer input{
+	background: transparent;
+}
+
+.accordeon > li{
+	margin-bottom: 4px;
+	padding: 10px;
+	border: #cfcfcf solid 1px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.accordeon > li.active{
+	cursor: auto;
+}
+
+.accordeon > li h6{
+	margin-bottom: 0;
+	position: relative;
+}
+
+.accordeon > li h6::after{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -7px;
+	content: '+';
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 14px;
+}
+
+.accordeon > li.active h6::after{
+	content: '-';
+}
+
+.accordeon > li ul{
+	margin: 10px -10px 0;
+	padding: 10px 10px 0;
+	border-top: #cfcfcf solid 1px;
+}
+
+.flickr{
+	margin: -4px;
+}
+
+.flickr > div{
+	padding: 4px;
+}
+
+
+@media (max-width: 992px){
+	.subscribe .subscribe-title{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 768px){
+	.padding{
+		padding: 40px 0;
+	}
+	
+	.subscribe form{
+		display: block;
+	}
+	
+	.subscribe form .subscribe-email{
+		margin: 0 0 15px 0;
+	}
+	
+	.subscribe form [type="submit"]{
+		display: block;
+		margin: 0 auto;
+	}
+}
