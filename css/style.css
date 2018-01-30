@@ -102,6 +102,10 @@ nav ul{
 	line-height: 36px;
 }
 
+nav li:hover{
+	color: #286090;
+}
+
 header nav ul{
 	display: flex;
 	justify-content: space-between;
@@ -122,8 +126,8 @@ header nav ul{
 	font-weight: 700;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	padding: 30px;
+	justify-content: flex-start;
+	padding: 100px 30px 30px;
 }
 
 .mobile-nav ul{
@@ -151,13 +155,17 @@ header nav ul{
 	cursor: pointer;
 }
 
+.toggler:hover, .mobile-nav .nav-close:hover{
+	color: #286090;
+}
+
 .slider, .post-header{
 	color: #fff;
 }
 
 .slide{
 	height: 100vh;
-	max-height: 700px;
+	max-height: 800px;
 	padding: 5rem 0;
 	position: relative;
 	display: flex;
@@ -492,6 +500,10 @@ footer *{
 	color: inherit;
 }
 
+.footer-blocks{
+	margin-bottom: 30px;
+}
+
 footer ul{
 	list-style: none;
 	margin: 0;
@@ -563,6 +575,10 @@ footer textarea, footer input{
 @media (max-width: 768px){
 	.padding{
 		padding: 40px 0;
+	}
+	
+	.subscribe .subscribe-title{
+		line-height: 35px;
 	}
 	
 	.subscribe form{
